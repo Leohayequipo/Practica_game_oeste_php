@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - The Fearsome Three | A Codepen Game</title>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Art based on https://www.instagram.com/p/BsvHvCsnegd/ -->
+
+<div class="screen">
+  <div class="cloud cloud--2"></div>
+  <div class="cloud cloud--1"></div> 
+  <div class="js-opening opening-screen">
+    <img src="https://gilleskurt.com/thefearsomethree/ostitle.png" alt="" class="opening-screen__title">
+    <img src="https://gilleskurt.com/thefearsomethree/osfigures.png" alt="" class="opening-screen__figures">
+    
+    <!-- Formulario para el nombre del jugador -->
+    <form class="player-name-form" onsubmit="return false;">
+      <h3>Ingresa tu nombre, Sheriff</h3>
+      <input type="text" id="playerName" placeholder="Tu nombre aquí..." maxlength="30" required>
+      <button type="submit" id="savePlayerBtn">Guardar y Jugar</button>
+      <div style="margin-top: 15px;">
+        <a href="ranking.html" target="_blank" style="color: #F59600; text-decoration: none; font-size: 14px;">🏆 Ver Ranking de Jugadores</a>
+      </div>
+    </form>
+    
+    <button class="js-start opening-screen__start-button is-hidden"></button>
+    <div class="js-message message-box message-box--full is-hidden">
+      <p>Pareces tener arena en el buche. Creo que un tipo como tú puede asumir el difícil trabajo de ser el nuevo sheriff en la ciudad. No me decepciones. <button type="button" class="js-continue continue-button">Continuar...</button></p>
+    </div>
+  </div>
+  <div class="js-play is-hidden">
+    <div class="js-sheriff sheriff"></div>
+    <div class="js-opponent opponent opponent--1"></div>
+    <div class="message-box message-box--half">
+      <button type="button" class="js-draw shoot-button is-hidden">¡Dispara!</button>
+      <span class="js-result"></span>
+      <span class="js-message"></span>
+      <button type="button" class="js-result-continue continue-button is-hidden">Continuar...</button>
+      <button type="button" class="js-duel continue-button is-hidden">Continuar...</button>
+    </div>
+  </div>
+      <div class="js-outro is-hidden">
+      <div class="message-box message-box--full">
+        <span class="js-final-message">¡Demonios, eres rápido con el revólver! ¡Serás un sheriff de primera que se come el infierno!</span>
+        <span class="js-total-time"></span>
+        <div style="margin: 20px 0;">
+          <a href="ranking.html" target="_blank" style="background: #FFB84D; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px;">🏆 Ver Ranking</a>
+          <button type="button" class="js-save-and-quit continue-button">Guardar y Salir...</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
